@@ -1,10 +1,10 @@
+server:
+  port: 8191
 spring:
-  application:
-    name: Config-Default
-
-eureka:
-  client:
-    fetchRegistry: false
-    registerWithEureka: false
-    serviceUrl:
-      defaultZone: http://localhost:8082/eureka
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/krish/spring-cloud-config
+          search-paths:
+           - '*service'
