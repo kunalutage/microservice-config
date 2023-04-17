@@ -1,10 +1,11 @@
-member:
- rent:
-  min: 10
-  max: 33
- price:
-  discount: 3
-vehicle:
- default:
-  model: cross over
-duration: all
+spring:
+  application:
+    name: demo-service-qa
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
